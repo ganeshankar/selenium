@@ -50,4 +50,7 @@ public class com_isr_base {
 	
 	driver.get(prop.getProperty("url"));
 	}
+
+	
+	
 	}

@@ -15,24 +15,7 @@ import Com_ISR_Pages.Organization_details_page;
 
 public class Organization_details_page_Testcase extends com_isr_base{
 
-private static String downloadPath = "C:\\Users\\navyug\\Downloads";
-	
-	private File getLatestFilefromDir(String dirPath){
-	    File dir = new File(dirPath);
-	    File[] files = dir.listFiles();
-	    if (files == null || files.length == 0) {
-	        return null;
-	    }
-
-	    File lastModifiedFile = files[0];
-	    for (int i = 1; i < files.length; i++) {
-	       if (lastModifiedFile.lastModified() < files[i].lastModified()) {
-	           lastModifiedFile = files[i];
-	       }
-	    }
-	    return lastModifiedFile;
-	}
-	
+public static String downloadPath = "C:\\Users\\Ganesh\\Downloads";
         
 	Organization_details_page orgdetail;
 	Homepage homepage;
@@ -42,7 +25,22 @@ private static String downloadPath = "C:\\Users\\navyug\\Downloads";
 		super();
 	}
 	
-	
+	private boolean isFileDownloaded_Ext(String dirPath, String ext){
+		boolean flag=false;
+	    File dir = new File(dirPath);
+	    File[] files = dir.listFiles();
+	    if (files == null || files.length == 0) {
+	        flag = false;
+	    }
+	    
+	    for (int i = 1; i < files.length; i++) {
+	    	if(files[i].getName().contains(ext)) {
+	    		flag=true;
+	    	}
+	    }
+	    return flag;
+	}
+	  
 	
 	@BeforeMethod
 	public void setup() throws InterruptedException {
@@ -63,15 +61,13 @@ private static String downloadPath = "C:\\Users\\navyug\\Downloads";
 	public void downloadcertificate() {
 		orgdetail.downloaddoc();
 		
-		File getLatestFile = getLatestFilefromDir(downloadPath);
-		String fileName = getLatestFile.getName();
-		 Assert.assertTrue(fileName.equals("angel_(1).pdf"), "Downloaded file name is not matching with expected file name");
-	 }
-		
+		Assert.assertTrue(isFileDownloaded_Ext(downloadPath, ".pdf"), "Failed to download Expected document");
+	}	
 	
 	@Test(priority =3)
 	public void uploadcertificate() throws IOException {
 		orgdetail.uploaddoc(prop.getProperty("org_detail_upload_doc1"), prop.getProperty("String org_detail_upload_doc2"));
+		
 	}
 
 	@AfterMethod

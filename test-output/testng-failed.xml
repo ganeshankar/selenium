@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [isr suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="com.qa.ExtendsReportListerner.ExtendsReportListern"/>
-  </listeners>
-  <test thread-count="5" name="isr test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="ISR_Selenium_Testcase.Organization_details_page_Testcase">
         <methods>
@@ -12,51 +9,8 @@
           <include name="downloadcertificate"/>
           <include name="close"/>
           <include name="uploadcertificate"/>
-          <include name="orgdetailspage"/>
         </methods>
       </class> <!-- ISR_Selenium_Testcase.Organization_details_page_Testcase -->
-      <class name="ISR_Selenium_Testcase.Login_Page_test">
-        <methods>
-          <include name="setup"/>
-          <include name="loginpagetitletest"/>
-          <include name="logintest"/>
-          <include name="close"/>
-          <include name="invalidloginpassword"/>
-          <include name="invalidloginemail"/>
-        </methods>
-      </class> <!-- ISR_Selenium_Testcase.Login_Page_test -->
-      <class name="ISR_Selenium_Testcase.Organization_uploadvideo_page_testcase">
-        <methods>
-          <include name="setup"/>
-          <include name="organization_video"/>
-        </methods>
-      </class> <!-- ISR_Selenium_Testcase.Organization_uploadvideo_page_testcase -->
-      <class name="ISR_Selenium_Testcase.Organization_setting_page_Testcase">
-        <methods>
-          <include name="setup"/>
-          <include name="beneficiaryfamilyangel"/>
-        </methods>
-      </class> <!-- ISR_Selenium_Testcase.Organization_setting_page_Testcase -->
-      <class name="ISR_Selenium_Testcase.Organization_Fcra_page_Testcase">
-        <methods>
-          <include name="pending_fcra"/>
-          <include name="verified_fcra"/>
-          <include name="setup"/>
-          <include name="upload_fcra"/>
-          <include name="download_fcra"/>
-        </methods>
-      </class> <!-- ISR_Selenium_Testcase.Organization_Fcra_page_Testcase -->
-      <class name="ISR_Selenium_Testcase.Organization_member_page_Testcase">
-        <methods>
-          <include name="download_sample_member"/>
-          <include name="edit_email"/>
-          <include name="upload_member"/>
-          <include name="addmember"/>
-          <include name="add_same_email"/>
-          <include name="edit_member_name_expert"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- ISR_Selenium_Testcase.Organization_member_page_Testcase -->
     </classes>
-  </test> <!-- isr test(failed) -->
-</suite> <!-- Failed suite [isr suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
