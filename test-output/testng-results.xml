@@ -1,49 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-02-05T21:39:42 IST" name="Default suite" finished-at="2020-02-05T21:43:00 IST" duration-ms="198269">
+  <suite started-at="2020-09-04T19:39:28 IST" name="Default suite" finished-at="2020-09-04T19:40:41 IST" duration-ms="72711">
     <groups>
     </groups>
-    <test started-at="2020-02-05T21:39:42 IST" name="Default test" finished-at="2020-02-05T21:43:00 IST" duration-ms="198269">
-      <class name="ISR_Selenium_Testcase.Organization_details_page_Testcase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:ISR_Selenium_Testcase.Organization_details_page_Testcase@3f56875e]" started-at="2020-02-05T21:39:42 IST" name="setup" finished-at="2020-02-05T21:40:42 IST" duration-ms="59756" status="PASS">
+    <test started-at="2020-09-04T19:39:28 IST" name="Default test" finished-at="2020-09-04T19:40:41 IST" duration-ms="72711">
+      <class name="ISR_Selenium_Testcase.Organization_member_page_Testcase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ISR_Selenium_Testcase.Organization_member_page_Testcase@32910148]" started-at="2020-09-04T19:39:28 IST" name="setup" finished-at="2020-09-04T19:40:26 IST" duration-ms="57783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="orgdetailspage()[pri:1, instance:ISR_Selenium_Testcase.Organization_details_page_Testcase@3f56875e]" started-at="2020-02-05T21:40:42 IST" name="orgdetailspage" finished-at="2020-02-05T21:40:57 IST" duration-ms="14625" status="PASS">
+        <test-method signature="addmember()[pri:1, instance:ISR_Selenium_Testcase.Organization_member_page_Testcase@32910148]" started-at="2020-09-04T19:40:26 IST" name="addmember" finished-at="2020-09-04T19:40:29 IST" duration-ms="3143" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- orgdetailspage -->
-        <test-method is-config="true" signature="close()[pri:0, instance:ISR_Selenium_Testcase.Organization_details_page_Testcase@3f56875e]" started-at="2020-02-05T21:40:57 IST" name="close" finished-at="2020-02-05T21:40:58 IST" duration-ms="1752" status="PASS">
+        </test-method> <!-- addmember -->
+        <test-method signature="edit_member_name_expert()[pri:2, instance:ISR_Selenium_Testcase.Organization_member_page_Testcase@32910148]" started-at="2020-09-04T19:40:29 IST" name="edit_member_name_expert" finished-at="2020-09-04T19:40:31 IST" duration-ms="2228" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:ISR_Selenium_Testcase.Organization_details_page_Testcase@3f56875e]" started-at="2020-02-05T21:40:58 IST" name="setup" finished-at="2020-02-05T21:41:52 IST" duration-ms="53415" status="PASS">
+        </test-method> <!-- edit_member_name_expert -->
+        <test-method signature="add_same_email()[pri:3, instance:ISR_Selenium_Testcase.Organization_member_page_Testcase@32910148]" started-at="2020-09-04T19:40:31 IST" name="add_same_email" finished-at="2020-09-04T19:40:34 IST" duration-ms="3143" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="downloadcertificate()[pri:2, instance:ISR_Selenium_Testcase.Organization_details_page_Testcase@3f56875e]" started-at="2020-02-05T21:41:52 IST" name="downloadcertificate" finished-at="2020-02-05T21:41:56 IST" duration-ms="4596" status="PASS">
+        </test-method> <!-- add_same_email -->
+        <test-method signature="edit_email()[pri:4, instance:ISR_Selenium_Testcase.Organization_member_page_Testcase@32910148]" started-at="2020-09-04T19:40:34 IST" name="edit_email" finished-at="2020-09-04T19:40:34 IST" duration-ms="112" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- downloadcertificate -->
-        <test-method is-config="true" signature="close()[pri:0, instance:ISR_Selenium_Testcase.Organization_details_page_Testcase@3f56875e]" started-at="2020-02-05T21:41:56 IST" name="close" finished-at="2020-02-05T21:41:59 IST" duration-ms="2308" status="PASS">
+        </test-method> <!-- edit_email -->
+        <test-method signature="download_sample_member()[pri:5, instance:ISR_Selenium_Testcase.Organization_member_page_Testcase@32910148]" started-at="2020-09-04T19:40:34 IST" name="download_sample_member" finished-at="2020-09-04T19:40:35 IST" duration-ms="266" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:ISR_Selenium_Testcase.Organization_details_page_Testcase@3f56875e]" started-at="2020-02-05T21:41:59 IST" name="setup" finished-at="2020-02-05T21:42:55 IST" duration-ms="56389" status="PASS">
+        </test-method> <!-- download_sample_member -->
+        <test-method signature="upload_member()[pri:6, instance:ISR_Selenium_Testcase.Organization_member_page_Testcase@32910148]" started-at="2020-09-04T19:40:35 IST" name="upload_member" finished-at="2020-09-04T19:40:41 IST" duration-ms="5895" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="uploadcertificate()[pri:3, instance:ISR_Selenium_Testcase.Organization_details_page_Testcase@3f56875e]" started-at="2020-02-05T21:42:55 IST" name="uploadcertificate" finished-at="2020-02-05T21:42:59 IST" duration-ms="3932" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- uploadcertificate -->
-        <test-method is-config="true" signature="close()[pri:0, instance:ISR_Selenium_Testcase.Organization_details_page_Testcase@3f56875e]" started-at="2020-02-05T21:42:59 IST" name="close" finished-at="2020-02-05T21:43:00 IST" duration-ms="1328" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- ISR_Selenium_Testcase.Organization_details_page_Testcase -->
+        </test-method> <!-- upload_member -->
+      </class> <!-- ISR_Selenium_Testcase.Organization_member_page_Testcase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

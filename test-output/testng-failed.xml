@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ISR_Selenium_Testcase.Organization_details_page_Testcase">
+      <class name="ISR_Selenium_Testcase.Organization_setting_page_Testcase">
         <methods>
           <include name="setup"/>
-          <include name="downloadcertificate"/>
-          <include name="close"/>
-          <include name="uploadcertificate"/>
+          <include name="beneficiaryfamilyangel"/>
         </methods>
-      </class> <!-- ISR_Selenium_Testcase.Organization_details_page_Testcase -->
+      </class> <!-- ISR_Selenium_Testcase.Organization_setting_page_Testcase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

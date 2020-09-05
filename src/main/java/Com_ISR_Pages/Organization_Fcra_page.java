@@ -37,9 +37,13 @@ public class Organization_Fcra_page extends com_isr_base {
 	public Organization_Fcra_page() {
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void navigate_to_fcrapage() {
+		link_from_menubar_under_organization_pofile.click();
+	}
 
 	public void fcra_registration(String org_fcra_enterdate) throws InterruptedException, IOException {
-		link_from_menubar_under_organization_pofile.click();
+		
 		upload_button.click();
 		upload_button_on_popup_page.click();
 		Thread.sleep(5000);
@@ -53,12 +57,20 @@ public class Organization_Fcra_page extends com_isr_base {
 		fcra_download.click();
 	}
 
-	public String pendingstate() {
+	public String fcra_status() {
 		return message_fcra_pending.getText();
 	}
 	
-	public String verifiedfcra() {
-		return message_fcra_approve.getText();
+	public void Status_fcra() {
+		if(message_fcra_pending.getText() == "Approval Pending")
+		{
+			System.out.println("FCRA is in pending State.");
+		}
+		
+		else
+		{
+			System.out.println("FCRA is in Approved state.");
+		}
 	}
-}
 
+}

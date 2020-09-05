@@ -21,7 +21,7 @@ public class Organization_uploadvideo_page_testcase extends com_isr_base{
 	public void setup() throws InterruptedException {
 		initialization();
 		loginpage = new Login_Page();
-		loginpage.Login(prop.getProperty("user_email_id"), prop.getProperty("user_password"));
+		loginpage.userfacebooklogin(prop.getProperty("user_email_id"), prop.getProperty("user_password"));
 		homepage = new Homepage();
 		homepage.selectorgnew();
 		orgvideo = new Organization_uploadvideo_page();

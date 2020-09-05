@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+
 import Com_ISR_Base.com_isr_base;
 
 public class Organization_details_page extends com_isr_base{
@@ -102,22 +103,32 @@ public class Organization_details_page extends com_isr_base{
         save_org_details.click();
 	}
 	
-	public void uploaddoc(String uploaddoc1, String uploaddoc2) throws IOException {
+	public boolean uploadbuttonverify() throws IOException {
 		scroll1.click();
 		scroll2.click();
-		if (upload_doc1.isEnabled()) {
-		upload_doc1.click();
-		Runtime.getRuntime().exec(uploaddoc1);
-   
-		upload_doc2.click();
-		Runtime.getRuntime().exec(uploaddoc1);
+		return  upload_doc1.isEnabled();
+	}
+	
+	
+	public void uploaddoc1 (String uploaddoc1, String uploaddoc2) throws IOException {
+		scroll1.click();
+		scroll2.click();
+		if((upload_doc1.isEnabled() == false))
+		{
+			System.out.println("Upload button is disabled");
+		}
+		else {
+			upload_doc1.click();
+			Runtime.getRuntime().exec(uploaddoc1);
+	   
+			upload_doc2.click();
+			Runtime.getRuntime().exec(uploaddoc1);
+			
+			save_org_details.click();
+			
+		}
+		}
 		
-		save_org_details.click();
-	} else {
-		System.out.println("button is enabled:" + upload_doc1.isEnabled() );
-		System.out.println("button is enabled:" + upload_doc2.isEnabled() );
-	}
-	}
 
     public void downloaddoc() {
     	

@@ -3,7 +3,9 @@ package Com_ISR_Base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -16,6 +18,7 @@ public class com_isr_base {
 
 	public static WebDriver driver;
 	public static Properties prop;
+	static public String parentwindow;
 	
 	public com_isr_base() {
 		try {
@@ -35,7 +38,7 @@ public class com_isr_base {
 	public static void initialization() {
 		String browsername= prop.getProperty("browser");
 		if(browsername.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Ganesh\\eclipse-workspace\\ISR_Selenium\\chrome\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Ganesh\\eclipse-workspace\\ISR_Selenium\\chromenew\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		else if(browsername.equals("FF"))	{
@@ -51,6 +54,12 @@ public class com_isr_base {
 	driver.get(prop.getProperty("url"));
 	}
 
-	
+	public void windowhandel() {
+		   Set<String> se = driver.getWindowHandles();
+		   Iterator<String> it =se.iterator();
+		   parentwindow = it.next();
+		   String childwindow = it.next();
+		   driver.switchTo().window(childwindow);	
+	}
 	
 	}

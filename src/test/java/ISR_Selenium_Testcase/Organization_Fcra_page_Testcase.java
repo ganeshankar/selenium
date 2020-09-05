@@ -24,18 +24,19 @@ public class Organization_Fcra_page_Testcase extends com_isr_base{
 	public void setup() throws InterruptedException {
 		initialization();
 		loginpage = new Login_Page();
-		loginpage.Login(prop.getProperty("user_email_id"), prop.getProperty("user_password"));
+		loginpage.userfacebooklogin(prop.getProperty("user_email_id"), prop.getProperty("user_password"));
 		homepage = new Homepage();
 		homepage.selectorgnew();
 		ofcra = new Organization_Fcra_page();
+		ofcra.navigate_to_fcrapage();
 	}
 	
 	@Test(priority =1)
 	public void upload_fcra() throws InterruptedException, IOException {
 		ofcra.fcra_registration(prop.getProperty("org_fcra_enterdate"));
 		
-      String actualresult= ofcra.pendingstate();
-	Assert.assertEquals(actualresult, "fcra_expected_message_on_fcra_page_pending");
+      String actualresult= ofcra.fcra_status();
+	Assert.assertEquals(actualresult, "Approval Pending");
 	}
 		
 
@@ -44,17 +45,10 @@ public class Organization_Fcra_page_Testcase extends com_isr_base{
 		ofcra.downloadfcra();
 	}
 	
-	@Test(priority =3)
-	public void pending_fcra() {
-		ofcra.pendingstate();
-		String actualresult= ofcra.pendingstate();
-		Assert.assertEquals(actualresult, "fcra_expected_message_on_fcra_page_pending");
+	@Test(priority = 3)
+	public void status_of_fcra() {
+		ofcra.Status_fcra();
+
 	}
 	
-	@Test(priority =4)
-	public void verified_fcra() {
-		ofcra.verifiedfcra();
-		String actualresult= ofcra.verifiedfcra();
-		Assert.assertEquals(actualresult, "fcra_expected_message_on_fcra_page_pending");
-	}	
 }

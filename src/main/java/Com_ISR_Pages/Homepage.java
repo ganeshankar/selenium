@@ -16,17 +16,13 @@ public class Homepage extends com_isr_base{
 	@FindBy(xpath ="//span[text()='Edit Organization']")
 	public WebElement selectorg_from_myprofile;
 	
+	@FindBy(xpath = "//div[@id='root']/header/child::div[2]/child::a/img")
+	public WebElement ABH_logo;
+	
 	public Homepage() {
 		PageFactory.initElements(driver, this);
 	}
-	
-	/*
-	 * public void selectorg() { List<WebElement> L1 = myprofile; int i=L1.size();
-	 * L1.get(i+1).click(); Actions at = new Actions(driver);
-	 * at.click(selectorg_from_myprofile).build().perform(); }
-	 */
-	 
-		
+			
 	
 	  public Organization_details_page selectorgnew() throws InterruptedException { 
 		  Thread.sleep(10000);
@@ -35,6 +31,8 @@ public class Homepage extends com_isr_base{
 	  at.click(selectorg_from_myprofile).build().perform(); return new
 	  Organization_details_page(); }
 	 
-	
+	public void abh_logo() {
+		ABH_logo.click();
+	}
 
 }
